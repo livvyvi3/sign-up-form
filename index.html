@@ -14,12 +14,30 @@
             <form action="" class="signup">            
                 <div class="form-input">
                     <p class="form-title">Let's do this!</p>
-                    <div class="input"></div>
-                    <div class="input"></div>
-                    <div class="input"></div>
-                    <div class="input"></div>
-                    <div class="input"></div>
-                    <div class="input"></div>
+                    <div class="input">
+                        <label for="first-name">First name</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="input">
+                        <label for="last-name">Last name</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                    <div class="input">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="input">
+                        <label for="Phone">Phone Number</label>
+                        <input type="text" name="phone" id="phone" minlength="10" max="12">
+                    </div>
+                    <div class="input">
+                        <label for="passwrd">Password</label>
+                        <input type="password" name="email" id="passwrd" required>
+                    </div>
+                    <div class="input">
+                        <label for="passwrd-confirmation">Confirm Password</label>
+                        <input type="password" name="confirm-pass" id="passwrd-con" required>
+                    </div>
                 </div>
                 <div class="form-footer">
                     <button>Create Account</button>                
