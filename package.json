@@ -1,0 +1,14 @@
+{
+  "name": "sign-up-page",
+  "version": "1.0.0",
+  "description": "Sign up page",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "vongai_olivia",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
