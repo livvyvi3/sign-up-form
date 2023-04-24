@@ -1,0 +1,31 @@
+/*======= Variables =======*/
+/*======= Mixins =======*/
+/*======= End of Mixins =======*/
+@media screen and (max-width: 517px) {
+  .form-content {
+    display: grid;
+    align-items: center; }
+    .form-content .picture img {
+      src: url("../dist/images/image-product-mobile.jpg"); }
+    .form-content .form-input .form-title {
+      font-size: 12px; } }
+
+* {
+  box-sizing: border-box; }
+
+.form-content {
+  display: grid; }
+  .form-content .picture img {
+    src: url("../dist/images/image-product-desktop.jpg"); }
+  .form-content .form-input input {
+    border-radius: 5px; }
+  .form-content .form-input .input {
+    border-radius: 12px; }
+  .form-content .form-input .form-title {
+    font-size: 20px; }
+  .form-content .btn {
+    background-color: #357035;
+    border-radius: 6px;
+    color: #b0c3d3; }
+    .form-content .btn:hover {
+      background-color: #7ea07e; }

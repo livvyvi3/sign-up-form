@@ -1,0 +1,33 @@
+/*======= Variables =======*/
+$prmry-color:  rgb(197, 210, 221);
+/*======= Mixins =======*/
+@mixin easeOut {
+    transition: all 1.6s ease-out;
+}
+
+//Media Query Mixins
+@mixin mediaSm {
+    @media screen and (max-width: 517px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXL {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}
+
+/*======= End of Mixins =======*/

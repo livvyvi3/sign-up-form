@@ -1,0 +1,37 @@
+// Widescreens
+@include mediaXL {}
+
+//Desktops & laptops
+@include mediaLg {}
+
+//Tablets and small laptops
+@include mediaMd{}
+
+//Smartphones
+@include mediaSm {
+
+    .form-content{
+        display: grid;
+        align-items: center;
+        
+        
+
+        .picture{
+            img{
+                src: url('../dist/images/image-product-mobile.jpg');
+            }
+        }
+
+        .form-input{
+            
+
+            .form-title{
+                font-size: 12px;
+                
+            }
+        }
+
+        
+    }
+    
+}
