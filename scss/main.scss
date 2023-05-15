@@ -1,46 +1,147 @@
 @import 'config';
-@import 'mobile';
+
 
 * {
     box-sizing: border-box;
+    font-size: 16px;
 }
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+  }
 
 .form-content {
-    display: grid;
+    height: 100vh;
+    display: flex;
+    flex-flow: row ;
+    gap: 20px;
+    padding: 0 20px;
 
-    .picture {
-        img {
-            src: url('../dist/images/image-product-desktop.jpg');
-        }
-    }
+    .hero{
+        flex-grow: 1;
+        position: relative;
+        background-image: url(../dist/images/blake-verdoorn-cssvEZacHvQ-unsplash.jpg);
+        width: 60vw;
+        min-width: 345px;
+        height: 100vh;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
 
-    .form-input{
-
-        input{
-            border-radius: 5px;
-        }
-
-        .input{
-            border-radius: 12px;
-            
-        }
-
-        .form-title{
-            font-size: 20px;
-        }
-
-        
-    }
-    .btn{
-        background-color: rgb(53, 112, 53);
-        border-radius: 6px;
-        color: rgb(176, 195, 211);
-
-        &:hover{
-            background-color: rgb(126, 160, 126);
-
+        &img{
+            width: 5rem;
+            padding: 10px;
+            //src: url(../dist/images/blake-verdoorn-cssvEZacHvQ-unsplash.jpg);
         }
     }
     
 
+    .dummy-text{
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .form-img {
+        background-image: url(../dist/images/image-product-desktop.jpg);
+        background-position: center;
+        background-size: auto;
+        background-repeat: no-repeat;
+        width: 40vw;
+    }
+
+    section{
+        display: flex;
+        width: 60vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        flex-grow: 2;
+        background-color: rgb(240, 240, 240);
+        
+        .dummy-text{
+            padding-left: 1em;
+        }
+
+       
+        
+        .signup{
+            margin-bottom: 1rem; 
+            box-shadow: 0 10px 20px -2px #b4b0b0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background-color: white;
+            padding: 1.2rem 2vw 3rem 2vw;
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
+            width: 60vw; 
+
+            form{
+
+                input, label{
+                    display: grid;
+                }
+
+                display: flex;
+                width: 60vw;
+                flex-flow: row wrap;
+                gap: 1rem;
+                font-size: 1rem;
+
+                label {
+                    position: relative;
+                    width: 15rem;
+                    margin-bottom: 15px;
+                  }
+
+                input{
+                    border-radius: 5px;
+                    margin-bottom: 0.6rem;
+    
+                    &:focus{
+                        outline: none;
+                        border: 2px solid rgb(177, 171, 171);
+                    }
+                    
+                }    
+                .input{
+                    flex-flow: column wrap;
+                } 
+            }
+
+                     
+    
+            
+        }
+        .btn{
+            background-color: $scndry-color;
+            border-radius: 6px;;
+            padding: 0.5rem 2rem;
+    
+            &:hover{
+                background-color: $hover-color;
+    
+            }
+        }
+        .login-opt{
+            padding-left: 1.5em;
+            a{
+                text-decoration: none;
+                color: $scndry-color;
+                font-weight: 600;
+
+                &:hover{
+                    color: $hover-color;
+                }
+            }
+            
+            
+        }
+    }
+    
 }
+@import 'mobile';

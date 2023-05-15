@@ -1,31 +1,126 @@
 /*======= Variables =======*/
 /*======= Mixins =======*/
 /*======= End of Mixins =======*/
-@media screen and (max-width: 517px) {
-  .form-content {
-    display: grid;
-    align-items: center; }
-    .form-content .picture img {
-      src: url("../dist/images/image-product-mobile.jpg"); }
-    .form-content .form-input .form-title {
-      font-size: 12px; } }
-
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 16px; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; }
 
 .form-content {
-  display: grid; }
-  .form-content .picture img {
-    src: url("../dist/images/image-product-desktop.jpg"); }
-  .form-content .form-input input {
-    border-radius: 5px; }
-  .form-content .form-input .input {
-    border-radius: 12px; }
-  .form-content .form-input .form-title {
-    font-size: 20px; }
-  .form-content .btn {
-    background-color: #357035;
-    border-radius: 6px;
-    color: #b0c3d3; }
-    .form-content .btn:hover {
-      background-color: #7ea07e; }
+  height: 100vh;
+  display: flex;
+  flex-flow: row;
+  gap: 20px;
+  padding: 0 20px; }
+  .form-content .hero {
+    flex-grow: 1;
+    position: relative;
+    background-image: url(../dist/images/blake-verdoorn-cssvEZacHvQ-unsplash.jpg);
+    width: 60vw;
+    min-width: 345px;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; }
+    .form-content .heroimg {
+      width: 5rem;
+      padding: 10px; }
+  .form-content .dummy-text {
+    font-size: large;
+    font-weight: bold; }
+  .form-content .form-img {
+    background-image: url(../dist/images/image-product-desktop.jpg);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 40vw; }
+  .form-content section {
+    display: flex;
+    width: 60vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    flex-grow: 2;
+    background-color: #f0f0f0; }
+    .form-content section .dummy-text {
+      padding-left: 1em; }
+    .form-content section .signup {
+      margin-bottom: 1rem;
+      box-shadow: 0 10px 20px -2px #b4b0b0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      background-color: white;
+      padding: 1.2rem 2vw 3rem 2vw;
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
+      width: 60vw; }
+      .form-content section .signup form {
+        display: flex;
+        width: 60vw;
+        flex-flow: row wrap;
+        gap: 1rem;
+        font-size: 1rem; }
+        .form-content section .signup form input, .form-content section .signup form label {
+          display: grid; }
+        .form-content section .signup form label {
+          position: relative;
+          width: 15rem;
+          margin-bottom: 15px; }
+        .form-content section .signup form input {
+          border-radius: 5px;
+          margin-bottom: 0.6rem; }
+          .form-content section .signup form input:focus {
+            outline: none;
+            border: 2px solid #b1abab; }
+        .form-content section .signup form .input {
+          flex-flow: column wrap; }
+    .form-content section .btn {
+      background-color: #357035;
+      border-radius: 6px;
+      padding: 0.5rem 2rem; }
+      .form-content section .btn:hover {
+        background-color: #7ea07e; }
+    .form-content section .login-opt {
+      padding-left: 1.5em; }
+      .form-content section .login-opt a {
+        text-decoration: none;
+        color: #357035;
+        font-weight: 600; }
+        .form-content section .login-opt a:hover {
+          color: #7ea07e; }
+
+@media screen and (max-width: 600px) {
+  .form-content {
+    height: auto; }
+    .form-content .picture img {
+      src: url("../dist/images/image-product-mobile.jpg"); }
+    .form-content section {
+      padding-left: 3rem; }
+      .form-content section p {
+        align-self: auto;
+        justify-content: center; }
+      .form-content section .form-input {
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 100%; }
+        .form-content section .form-input input {
+          width: 80%;
+          padding: 12px 15px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px; }
+        .form-content section .form-input .input {
+          display: flex;
+          flex-flow: column;
+          column-gap: 5px; }
+        .form-content section .form-input .form-title {
+          font-size: 20px; } }

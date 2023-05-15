@@ -1,20 +1,10 @@
-// Widescreens
-@include mediaXL {}
 
-//Desktops & laptops
-@include mediaLg {}
-
-//Tablets and small laptops
-@include mediaMd{}
 
 //Smartphones
 @include mediaSm {
 
     .form-content{
-        display: grid;
-        align-items: center;
-        
-        
+        height: auto;
 
         .picture{
             img{
@@ -22,14 +12,40 @@
             }
         }
 
-        .form-input{
+        section{
+            padding-left: 3rem;
             
 
-            .form-title{
-                font-size: 12px;
-                
+            p{
+                align-self: auto;
+                justify-content: center;                
             }
-        }
+
+            .form-input{
+                flex-flow: column nowrap;
+                align-items: center;
+                width: 100%;
+            
+                input{
+                    width: 80%;
+                    padding: 12px 15px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                }
+                .input{
+                    display: flex;
+                    flex-flow: column;
+                    column-gap: 5px;
+                }
+    
+                .form-title{
+                    font-size: 20px;
+                    
+                }
+            }
+        }    
 
         
     }
